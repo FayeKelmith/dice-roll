@@ -64,7 +64,10 @@ function end() {
   finalScore[1] = score1;
   currentScore0.textContent = score0;
   currentScore1.textContent = score1;
-
+  //resetting the final game to zero
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove(`player--winner`);
   //restarting the active player
   activePlayer = 0;
   //return active player
